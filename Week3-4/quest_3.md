@@ -9,21 +9,21 @@ LinuxはOSの一種で、コンピューター動かすための基本ソフト�
 
 1. 有名なディストリビューション
 - Red Hat系:
- - Red Hat Enterprise Linux (RHEL)
- - CentOS
- - Fedora
- - Debian系:
+  - Red Hat Enterprise Linux (RHEL)
+  - CentOS
+  - Fedora
+  - Debian系:
 
 - Debian系
- - Ubuntu
- - Linux Mint
- - Raspbian (Raspberry Pi向け)
+  - Ubuntu
+  - Linux Mint
+  - Raspbian (Raspberry Pi向け)
 
 1. シェル
 シェルはLinuxのCLIを提供するソフトウェア。
 ユーザーとLinuxカーネルの仲介役をしている。
 
 - 代表的なシェル
- - sh
- - bash
- - zsh
+  - sh
+  - bash
+  - zsh
