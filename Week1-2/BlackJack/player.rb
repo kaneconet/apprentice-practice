@@ -1,4 +1,6 @@
-require_relative 'card'
+# frozen_string_literal: true
+
+require_relative "card"
 
 # プレイヤークラス
 class Player
@@ -18,7 +20,7 @@ class Player
 
     @hand.each do |card|
       sum += card.value
-      aces += 1 if card.rank == 'A'
+      aces += 1 if card.rank == "A"
     end
 
     aces.times do

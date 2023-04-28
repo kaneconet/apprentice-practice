@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+
+# 開発環境及びテスト環境のみで使用
+group :development, :test do
+  gem "rubocop", require: false
+end

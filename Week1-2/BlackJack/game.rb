@@ -1,6 +1,9 @@
-require_relative 'deck'
-require_relative 'player'
+# frozen_string_literal: true
 
+require_relative "deck"
+require_relative "player"
+
+# ゲームクラスはゲームの進行を管理します
 class Game
   def initialize
     @deck = Deck.new
@@ -33,7 +36,7 @@ class Game
     while @player.total < 21
       puts "あなたの現在の得点は#{@player.total}です。カードを引きますか？（Y/N）"
       decision = gets.chomp
-      break if decision.upcase == 'N'
+      break if decision.upcase == "N"
 
       @player.draw_card(@deck.draw)
       puts "あなたの引いたカードは#{@player.hand.last.suit}の#{@player.hand.last.rank}です。"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # カードのクラス suit, rankの管理
 class Card
   attr_reader :suit, :rank

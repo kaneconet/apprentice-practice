@@ -1,4 +1,6 @@
-require_relative 'game'
+# frozen_string_literal: true
+
+require_relative "game"
 
 puts "ブラックジャックを開始します。"
 game = Game.new

@@ -1,0 +1,12 @@
+AllCops:
+  TargetRubyVersion: 3.1 # 対象となるRubyのバージョン
+  NewCops: enable        # 新たに追加されたCopを自動的に有効にする
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes # 文字列リテラルのスタイル（ここではダブルクォートを指定）
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
