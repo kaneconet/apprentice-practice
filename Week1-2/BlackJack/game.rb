@@ -34,9 +34,18 @@ class Game
 
   def player_turn
     while @player.total < 21
-      puts "あなたの現在の得点は#{@player.total}です。カードを引きますか？（Y/N）"
-      decision = gets.chomp
-      break if decision.upcase == "N"
+      decision = nil # loop外でも参照するため初期化
+      loop do
+        puts "あなたの現在の得点は#{@player.total}です。カードを引きますか？（Y/N）"
+        decision = gets.chomp
+        if decision == "Y" || decision == "N"
+          break
+        else
+          puts "入力された値が無効です。YかNを入力してください"
+        end
+      end
+
+      break if decision == "N"
 
       @player.draw_card(@deck.draw)
       puts "あなたの引いたカードは#{@player.hand.last.suit}の#{@player.hand.last.rank}です。"
