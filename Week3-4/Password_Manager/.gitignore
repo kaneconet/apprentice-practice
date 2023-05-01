@@ -1,2 +1,4 @@
 # 一時生成されるtxtファイルを無視する
 *.txtx
+# .DS_Storeを無視する
+.DS_Store
