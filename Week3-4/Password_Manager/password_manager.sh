@@ -2,7 +2,7 @@
 echo "パスワードマネージャーへようこそ！"
 input=""
 # あなたのGPGキーのメールアドレス
-gpg_email="kaneconet@gmail.com"
+gpg_email="yourmail@example.com"
 # Exitが入力されない限りループを実行
 while [ "$input" != "Exit" ]
 do
