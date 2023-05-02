@@ -1,4 +1,6 @@
 # 一時生成されるtxtファイルを無視する
-*.txtx
+*.txt
+# GPGファイルを無視する
+*.gpg
 # .DS_Storeを無視する
 .DS_Store
