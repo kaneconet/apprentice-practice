@@ -1,0 +1,73 @@
+@startuml
+entity "Channels" as channels {
+  + id: bigint(20) [PK, AI]
+  ---
+  name: varchar(100)
+  description: text
+}
+
+entity "Slots" as slots {
+  + id: bigint(20) [PK, AI]
+  ---
+  channel_id : bigint {FK}
+  start_time : datetime
+  end_time : datetime
+  episode_id : bigint {FK}
+}
+
+entity "Seasons" as seasons {
+  + id: bigint(20) [PK, AI]
+  ---
+  program_id : bigint {FK}
+  season_number : int
+}
+
+entity "Episodes" as episodes {
+  + id: bigint(20) [PK, AI]
+  ---
+  season_id : bigint {FK}
+  episode_number : int
+  title : varchar(100)
+  description : text
+  duration : time
+  release_date : date
+}
+
+entity "Programs" as programs {
+  + id: bigint(20) [PK, AI]
+  ---
+  name: varchar(100)
+  description: text
+}
+
+entity "ProgramGenres" {
+  + id : bigint {PK}
+  --
+  program_id : bigint {FK}
+  genre_id : bigint {FK}
+}
+
+entity "Genres" as Genres {
+  + id: bigint(20) [PK, AI]
+  ---
+  name: varchar(100)
+}
+
+entity "ViewCounts" {
+  + id : bigint {PK}
+  --
+  episode_id : bigint {FK}
+  slot_id : bigint {FK}
+  count : bigint
+}
+
+slots }o--|| channels
+slots }o--|| episodes
+seasons }o--|| programs
+episodes }o--|| seasons
+ProgramGenres }o--|| programs
+ProgramGenres }o--|| Genres
+ViewCounts }o--|| episodes
+ViewCounts }o--|| slots
+
+@enduml
