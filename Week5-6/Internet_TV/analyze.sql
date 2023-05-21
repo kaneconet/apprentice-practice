@@ -27,7 +27,7 @@ ORDER BY Slots.start_time ASC;
 -- 本日のデータを取得する場合 CURDATE() を使用
 
 -- 本日から一週間分、何日の何時から何の番組が放送されるのかを知りたい
-SELECT Channels.name AS channel_name, Slots.start_time, Slots.end_time, Seasons.season_number, COUNT(Episodes.id) AS episode_count, Episodes.title, Episodes.description
+SELECT Channels.name, Slots.start_time, Slots.end_time, Seasons.season_number, COUNT(Episodes.id), Episodes.title, Episodes.description
 FROM Channels
 JOIN Slots ON Channels.id = Slots.channel_id
 JOIN Episodes ON Slots.episode_id = Episodes.id
